@@ -1,26 +1,24 @@
-const fond1 = document.querySelector("#fond1")
-const fond2 = document.querySelector("#fond2")
-const fond3 = document.querySelector("#fond3")
-const fond4 = document.querySelector("#fond4")
-const view = document.querySelector('.view')
-const menu = document.querySelector('#menu')
-const bulle = document.querySelector("#link")
-const close = document.querySelector('#close')
 
-const tContainer = document.querySelector("#trees-container")
-let datas = deforestation
+displayDate()
+parallax()
 
-const infos = document.querySelector("#info-container")
-const note = document.querySelector("#note")
-const percent = document.querySelector("#percent")
-const date = document.querySelector("#date")
+view.addEventListener("scroll",()=>{
+  if(view.scrollLeft > window.innerWidth){
+    infos.style.display = "block"
+    infos.style.animation = "0.5s fadeIn forwards"
+    infos.style.opacity = 1
+  }else if(view.scrollLeft < window.innerWidth){
+    infos.style.opacity = 1
+    infos.style.animation = "0.5s fadeOut backwards"
+    infos.style.opacity = 0
+  }
+})
 
 function parallax(){
   fond1.style.transform = "translateX("+ -0.1 * view.scrollLeft +"px)"
-  fond2.style.transform = "translateX("+ -0.3 * view.scrollLeft +"px)"
-  fond3.style.transform = "translateX("+ -0.1 * view.scrollLeft +"px)"
-  fond4.style.transform = "translateX("+ 0.1 * view.scrollLeft +"px)"
-
+  fond2.style.transform = "translateX("+ -0.24 * view.scrollLeft +"px)"
+  fond3.style.transform = "translateX("+ -0.2 * view.scrollLeft +"px)"
+  fond4.style.transform = "translateX("+ -0.1 * view.scrollLeft +"px)"
   window.requestAnimationFrame(parallax)
 }
 
@@ -29,15 +27,18 @@ function displayDate(){
     let currentDate = 2014 - (tContainer.offsetWidth - view.scrollLeft - window.innerWidth)*24/window.innerWidth
     let perc = Math.abs(2014 - parseInt(currentDate) - 24)
     date.innerHTML = parseInt(currentDate)
-    console.log(perc)
     percent.innerHTML = datas[perc].percent + "%*"
   }
 
   window.requestAnimationFrame(displayDate)
 }
 
-displayDate()
-parallax()
+function getRandomNumber(max){
+  return Math.floor(Math.random() * Math.floor(max)) + 1
+}
+
+
+/* toggle */
 
 menu.addEventListener("click",()=>{
   menu.classList.toggle("display-none")
