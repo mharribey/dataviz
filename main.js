@@ -1,20 +1,16 @@
-let la = document.getElementById("la")
-let deforestations = document.getElementById("deforestation")
-let cartouche = document.getElementById("cartouche")
-let scroll = document.getElementById("scroll")
-let fleche = document.getElementById("fleche")
+let fond1 = document.getElementById("fond1")
+let fond2 = document.getElementById("fond2")
+let fond3 = document.getElementById("fond3")
+let fond4 = document.getElementById("fond4")
 
-la.style.left = window.innerWidth / 2 - 270 + "px"
-la.style.top = window.innerHeight / 2 - la.height/2 - 120 + "px"
+let tree = document.getElementById("trees-container")
 
-deforestations.style.left = window.innerWidth / 2 - deforestations.width/2 + "px"
-deforestations.style.top = window.innerHeight / 2 - deforestations.height/2 + "px"
+function parallax(){
+  fond1.style.transform = "translateX("+ -0.3 * tree.scrollLeft +"px)";
+  fond3.style.transform = "translateX("+ 0.5 * tree.scrollLeft +"px)";
+  fond4.style.transform = "translateX("+ 1.2 * tree.scrollLeft +"px)";
 
-cartouche.style.left = window.innerWidth / 2 - cartouche.width/2 + "px"
-cartouche.style.top = window.innerHeight / 2 - cartouche.height/2 + 140 + "px"
+  window.requestAnimationFrame(parallax)
+}
 
-scroll.style.left = window.innerWidth / 2 - scroll.width/2 - 20 + "px"
-scroll.style.top = window.innerHeight / 2 - scroll.height/2 + 143 + "px"
-
-fleche.style.left = window.innerWidth / 2 - scroll.width/2 + 140 + "px"
-fleche.style.top = window.innerHeight / 2 - scroll.height/2 + 143 + "px"
+parallax()

@@ -3,7 +3,7 @@ html, body {
   padding:0;
 }
 
-.wrapper {
+#wrapper {
   width:300vw;
   height:100vh;
   display: flex;
@@ -28,7 +28,7 @@ html, body {
 }
 
 #fleche {
-  animation: move 1s ease-in-out infinite;
+  animation: move 2s ease-in-out infinite;
 }
 
 .display-none {
@@ -37,10 +37,10 @@ html, body {
 
 @keyframes move {
   0% {
-    transform: translateX("0px");
+    transform: translateX(0px);
   }50%{
-    transform: translateX("10px");
+    transform: translateX(10px);
   }100%{
-    transform: translateX("0px");
+    transform: translateX(0px);
   }
 }
