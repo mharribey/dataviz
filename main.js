@@ -3,12 +3,13 @@ let fond2 = document.getElementById("fond2")
 let fond3 = document.getElementById("fond3")
 let fond4 = document.getElementById("fond4")
 
-let tree = document.getElementById("trees-container")
+const view = document.querySelector('.view')
 
 function parallax(){
-  fond1.style.transform = "translateX("+ -0.3 * tree.scrollLeft +"px)";
-  fond3.style.transform = "translateX("+ 0.5 * tree.scrollLeft +"px)";
-  fond4.style.transform = "translateX("+ 1.2 * tree.scrollLeft +"px)";
+  fond1.style.transform = "translateX("+ -0.2 * view.scrollLeft +"px)";
+  fond2.style.transform = "translateX("+ -0.3 * view.scrollLeft +"px)";
+  fond3.style.transform = "translateX("+ 0.3 * view.scrollLeft +"px)";
+  fond4.style.transform = "translateX("+ 0.2 * view.scrollLeft +"px)";
 
   window.requestAnimationFrame(parallax)
 }
