@@ -10,12 +10,18 @@ a {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+p{
+  margin:0;
+  letter-spacing: 0.7px;
+}
 
 
 @font-face {
  font-family: "Avenir";
  src: url("assets/avenir.otf") format("otf"),
 }
+
+/* main elements */
 
 #wrapper {
   width:300vw;
@@ -30,6 +36,7 @@ a {
   height:100%;
   z-index: -1;
   background: url("assets/fond/fond.jpg");
+  background-size: cover;
   position: relative;
 }
 
@@ -47,6 +54,8 @@ a {
   height:100vh;
 }
 
+/* added elements */
+
 #menu-container {
   position: absolute;
   padding:50px;
@@ -58,17 +67,43 @@ a {
   padding:50px;
   bottom:0;
   left:0;
+  z-index: 3;
 }
 #info-container #cartouche_vide {
+  position: relative;
+  z-index: 1;
   width:200px;
+}
+
+#date {
+  position:absolute;
+  bottom:80px;
+  font-weight: bold;
+  font-size: 20px;
+  left:64px;
+  z-index: 2;
+}
+#percent {
+  position:absolute;
+  color:white;
+  bottom:80px;
+  left:139px;
+  font-size: 20px;
+  z-index: 2;
+}
+#note {
+  position:absolute;
+  color:white;
+  font-size: 6px;
+  bottom:61px;
+  left:123px;
+  z-index: 2;
 }
 
 #menu {
   width:40px;
   cursor:pointer;
 }
-
-
 #link {
   background-color: #ff7373;
   border-radius: 10px;
@@ -78,20 +113,13 @@ a {
   padding:10px;
   flex-direction: column;
 }
-
-#link p {
-  margin:0;
-}
-
 #close {
   width:20px;
   margin-left: 88%;
   cursor: pointer;
 }
 
-#info {
-
-}
+/* animations */
 
 #fleche {
   animation: move 2s ease-in-out infinite;
@@ -100,8 +128,6 @@ a {
 .display-none {
   display: none;
 }
-
-/* anim */
 
 @keyframes move {
   0% {
