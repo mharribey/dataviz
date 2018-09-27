@@ -23,8 +23,20 @@ p{
 
 /* main elements */
 
+.causes {
+  background: #ff7373;
+  width:100vw;
+  height:100vh;
+}
+
+.text-container {
+  width:100vw;
+  height:100%;
+  overflow: hidden;
+}
+
 #wrapper {
-  width:300vw;
+  width:610.5vw;
   height:100vh;
   display: flex;
   align-items: center;
@@ -40,17 +52,74 @@ p{
   position: relative;
 }
 
+.text-container{
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  justify-content: center;
+}
+
+.text-content{
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scroll-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:fit-content;
+  padding:0.2em 1.8em;
+  border:2px solid white;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50px;
+  margin-top: 2vh;
+}
+
 .view {
   height: 100vh;
   width: 100vw;
   overflow: auto;
 }
 
+#la {
+  z-index:2;
+  width:10vw;
+  margin-right: 32vw;
+}
+#deforestation {
+  z-index:2;
+  width:65vw;
+  margin-bottom: 3vh;
+}
+#fleche {
+  z-index:2;
+  width:2vw;
+}
+#scroll {
+  z-index:2;
+  width:10vw;
+  margin-top:1vh;
+  margin-right: 0.7vw;
+}
+#cartouche{
+  z-index: 2;
+  width:17vw;
+  display: none;
+}
 #fond1, #fond2, #fond3, #fond4 {
   position: absolute;
   top:0;
   left:0;
   width:125vw;
+  height:100vh;
+}
+#fond5, #fond6, #fond7 {
+  position: absolute;
+  top:0;
+  left:0;
+  width:600vw;
   height:100vh;
 }
 
@@ -104,8 +173,7 @@ p{
   width:40px;
   cursor:pointer;
 }
-#link {
-  background-color: #ff7373;
+#link, #link-causes {
   border-radius: 10px;
   font-size: 18px;
   color:white;
@@ -113,6 +181,13 @@ p{
   padding:10px;
   flex-direction: column;
 }
+#link {
+  background-color: #ff7373;
+}
+#link-causes {
+  background-color: #ffb6b6;
+}
+
 #close {
   width:20px;
   margin-left: 88%;

@@ -17,17 +17,30 @@
           </div>
         </div>
         <div id="trees-container">
+          <!-- INTERFACE -->
           <img src="assets/fond/fond4.png" id="fond4" style="z-index:1">
           <img src="assets/fond/fond3.png" id="fond3" style="z-index:2">
 
-          <img src="assets/interface/la.svg" id="la" style="z-index:2;position:absolute;width:10vw;left:30vw;top:30vh">
-          <img src="assets/interface/deforestation.svg" id="deforestation" style="z-index:2;position:absolute;width:65vw;left:18vw;top:42vh">
-          <img src="assets/interface/cartouche.svg" id="cartouche" style="z-index:2;position:absolute;width:17vw;left:42vw;top:65.5vh">
-          <img src="assets/interface/scroll.svg" id="scroll" style="z-index:2;position:absolute;width:10vw;left:43.5vw;top:67.2vh">
-          <img src="assets/interface/fleche.svg" id="fleche" style="z-index:2;position:absolute;width:2vw;left:55vw;top:67.2vh">
+          <div class="text-container">
+            <div class="text-content">
+              <img src="assets/interface/la.svg" id="la">
+              <img src="assets/interface/deforestation.svg" id="deforestation">
+              <img src="assets/interface/cartouche.svg" id="cartouche">
+              <div class="scroll-container">
+                <img src="assets/interface/scroll.svg" id="scroll">
+                <img src="assets/interface/fleche.svg" id="fleche">
+              </div>
+            </div>
+          </div>
 
           <img src="assets/fond/fond2.png" id="fond2" style="z-index:4">
           <img src="assets/fond/fond1.png" id="fond1" style="z-index:5">
+
+          <!-- DATAVIZ -->
+
+          <img src="assets/fond/fond5.png" id="fond5" style="z-index:4">
+          <img src="assets/fond/fond6.png" id="fond6" style="z-index:3">
+          <img src="assets/fond/fond7.png" id="fond7" style="z-index:2">
         </div>
         <div id="info-container">
           <img src="assets/interface/cartouche_vide.svg" id="cartouche_vide">
@@ -42,5 +55,10 @@
     <script type="text/javascript" src="datas/numbers.json" charset="utf-8"></script>
     <script type="text/javascript" src="variables.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="menu.js"></script>
+    <script type="text/javascript">
+      displayDate()
+      parallax()
+    </script>
   </body>
 </html>

@@ -1,9 +1,7 @@
-
-displayDate()
-parallax()
+infos.style.display = "none"
 
 view.addEventListener("scroll",()=>{
-  if(view.scrollLeft > window.innerWidth){
+  if(view.scrollLeft > window.innerWidth - window.innerWidth/10){
     infos.style.display = "block"
     infos.style.animation = "0.5s fadeIn forwards"
     infos.style.opacity = 1
@@ -15,16 +13,22 @@ view.addEventListener("scroll",()=>{
 })
 
 function parallax(){
-  fond1.style.transform = "translateX("+ -0.1 * view.scrollLeft +"px)"
-  fond2.style.transform = "translateX("+ -0.24 * view.scrollLeft +"px)"
+  fond1.style.transform = "translateX("+ 0.05 * view.scrollLeft +"px)"
+  // fond2.style.transform = "translateX("+ -0.2 * view.scrollLeft +"px)"
+  textContent.style.transform = "translateX("+ view.scrollLeft +"px)"
+  infos.style.transform = "translateX("- view.scrollLeft +"px)"
   fond3.style.transform = "translateX("+ -0.2 * view.scrollLeft +"px)"
   fond4.style.transform = "translateX("+ -0.1 * view.scrollLeft +"px)"
+  fond5.style.transform = "translateX("+ 0.02 * view.scrollLeft +"px)"
+  fond6.style.transform = "translateX("+ -0.05 * view.scrollLeft +"px)"
+  fond7.style.transform = "translateX("+ -0.02 * view.scrollLeft +"px)"
   window.requestAnimationFrame(parallax)
 }
 
 function displayDate(){
   if(view.scrollLeft > window.innerWidth){
-    let currentDate = 2014 - (tContainer.offsetWidth - view.scrollLeft - window.innerWidth)*24/window.innerWidth
+    let currentDate = 2014 - ((tContainer.offsetWidth - view.scrollLeft - window.innerWidth)*24)/(window.innerWidth*5)
+    console.log(2014 - ((tContainer.offsetWidth - view.scrollLeft - window.innerWidth)*30)/(window.innerWidth*5))
     let perc = Math.abs(2014 - parseInt(currentDate) - 24)
     date.innerHTML = parseInt(currentDate)
     percent.innerHTML = datas[perc].percent + "%*"
@@ -36,16 +40,3 @@ function displayDate(){
 function getRandomNumber(max){
   return Math.floor(Math.random() * Math.floor(max)) + 1
 }
-
-
-/* toggle */
-
-menu.addEventListener("click",()=>{
-  menu.classList.toggle("display-none")
-  bulle.classList.toggle("display-none")
-});
-
-close.addEventListener("click",()=>{
-  menu.classList.toggle("display-none")
-  bulle.classList.toggle("display-none")
-});
