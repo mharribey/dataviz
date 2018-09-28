@@ -252,7 +252,7 @@ h1 {
 
 #menu {
   width:40px;
-  cursor:pointer;
+  cursor: crosshair;
 }
 #link, #link-causes {
   border-radius: 15px;
@@ -326,5 +326,14 @@ h1 {
     transform: translateX(300px);
   }100%{
     transform: translateX(0);
+  }
+}
+
+@media screen and (min-width:1500px) {
+  .barre{
+    display: none;
+  }
+  #urban, #agri, #extr, #expl{
+    font-size: 30px;
   }
 }

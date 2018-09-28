@@ -13,15 +13,16 @@ view.addEventListener("scroll",()=>{
 })
 
 function parallax(){
-  fond1.style.transform = "translateX("+ 0.05 * view.scrollLeft +"px)"
-  // fond2.style.transform = "translateX("+ -0.2 * view.scrollLeft +"px)"
   textContent.style.transform = "translateX("+ view.scrollLeft +"px)"
   infos.style.transform = "translateX("- view.scrollLeft +"px)"
+
+  fond1.style.transform = "translateX("+ 0.05 * view.scrollLeft +"px)"
   fond3.style.transform = "translateX("+ -0.2 * view.scrollLeft +"px)"
   fond4.style.transform = "translateX("+ -0.1 * view.scrollLeft +"px)"
-  fond5.style.transform = "translateX("+ 0.02 * view.scrollLeft +"px)"
-  fond6.style.transform = "translateX("+ -0.05 * view.scrollLeft +"px)"
-  fond7.style.transform = "translateX("+ -0.02 * view.scrollLeft +"px)"
+
+  fond5.style.transform = "translateX("+ -0.4 * view.scrollLeft +"px)"
+  fond6.style.transform = "translateX("+ -0.2 * view.scrollLeft +"px)"
+  fond7.style.transform = "translateX("+ -0.03 * view.scrollLeft +"px)"
   window.requestAnimationFrame(parallax)
 }
 

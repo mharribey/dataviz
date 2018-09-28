@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deforestation</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="view">
+      <div id="wrapper">
+        <div id="menu-container" style="z-index:6">
+          <img src="assets/interface/menu.svg" class="" id="menu">
+          <div id="link" class="display-none">
+            <img src="assets/interface/close.svg" id="close">
+            <a href="causes.html">LES CAUSES</a><br>
+            <a href="deforestation.html">LA DEFORESTATION </a>
+          </div>
+        </div>
+        <div id="trees-container">
+          <!-- INTERFACE -->
+          <img src="assets/fond/fond4.png" id="fond4" style="z-index:1">
+          <img src="assets/fond/fond3.png" id="fond3" style="z-index:2">
+
+          <div class="text-container">
+            <div class="text-content">
+              <img src="assets/interface/la.svg" id="la">
+              <img src="assets/interface/deforestation.svg" id="deforestation">
+              <img src="assets/interface/cartouche.svg" id="cartouche">
+              <div class="scroll-container">
+                <img src="assets/interface/scroll.svg" id="scroll">
+                <img src="assets/interface/fleche.svg" id="fleche">
+              </div>
+            </div>
+          </div>
+
+          <img src="assets/fond/fond2.png" id="fond2" style="z-index:4">
+          <img src="assets/fond/fond1.png" id="fond1" style="z-index:5">
+
+          <!-- DATAVIZ -->
+
+          <img src="assets/fond/fond5.png" id="fond5" style="z-index:4">
+          <img src="assets/fond/fond6.png" id="fond6" style="z-index:3">
+          <img src="assets/fond/fond7.png" id="fond7" style="z-index:2">
+        </div>
+        <div id="info-container">
+          <img src="assets/interface/cartouche_vide.svg" id="cartouche_vide">
+          <p id="date">1990</p>
+          <p id="percent">31.801%*</p>
+          <p id="note">*surface forestière mondiale</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NO GOD NO, PLEASE NO. -->
+    <script type="text/javascript" src="datas/numbers.json" charset="utf-8"></script>
+    <script type="text/javascript" src="variables.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="menu.js"></script>
+    <script type="text/javascript">
+      displayDate()
+      parallax()
+    </script>
+  </body>
+</html>
