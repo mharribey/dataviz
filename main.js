@@ -16,7 +16,7 @@ function parallax(){
   textContent.style.transform = "translateX("+ view.scrollLeft +"px)"
   infos.style.transform = "translateX("- view.scrollLeft +"px)"
 
-  fond1.style.transform = "translateX("+ 0.05 * view.scrollLeft +"px)"
+  fond1.style.transform = "translateX("+ -0.25 * view.scrollLeft +"px)"
   fond3.style.transform = "translateX("+ -0.2 * view.scrollLeft +"px)"
   fond4.style.transform = "translateX("+ -0.1 * view.scrollLeft +"px)"
 

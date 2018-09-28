@@ -136,12 +136,12 @@ h1 {
 .text-container{
   display: flex;
   align-items: center;
-  z-index: 2;
+  z-index: 4;
   justify-content: center;
 }
 
 .text-content{
-  z-index: 2;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: center;
