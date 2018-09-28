@@ -1,6 +1,10 @@
+let audio = new Audio('assets/son-foret.mp3');
+
 infos.style.display = "none"
 
 view.addEventListener("scroll",()=>{
+  audio.play();
+
   if(view.scrollLeft > window.innerWidth - window.innerWidth/10){
     infos.style.display = "block"
     infos.style.animation = "0.5s fadeIn forwards"
